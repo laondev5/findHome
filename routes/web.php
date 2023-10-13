@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::group(['middleware'=>'prevent-back-history'], function(){
 Route::get('/admin', function () {
     return view('admin.auth.login');
 });
@@ -32,6 +34,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+
 require __DIR__.'/auth.php';
 
 require __DIR__.'/adminauth.php';
+
+
+});

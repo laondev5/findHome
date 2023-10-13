@@ -1,6 +1,6 @@
 @extends('admin.layout')
 @section('admin')
-<div class="w-[100%] ">
+<div class="w-[100%] bg-white mx-12 my-8">
     <!--- alert --->
     @if (Session::has('message'))
 
@@ -21,8 +21,63 @@
 
     <h1>welcome {{Auth::guard('admin')->user()->name}}</h1>
 
-    <a href="{{ route('admin.logout') }}">
-        <button type="button" class="py-2 px-6 bg-red-300">Logout</button>
-    </a>
+    <div class="flex flex-col overflow-x-auto">
+  <div class="sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-left text-sm font-light">
+          <thead class="border-b font-medium dark:border-neutral-500">
+            <tr>
+              <th scope="col" class="px-6 py-4">#</th>
+              <th scope="col" class="px-6 py-4">Heading</th>
+              <th scope="col" class="px-6 py-4">Heading</th>
+              <th scope="col" class="px-6 py-4">Heading</th>
+              <th scope="col" class="px-6 py-4">Heading</th>
+              <th scope="col" class="px-6 py-4">Heading</th>
+              <th scope="col" class="px-6 py-4">Heading</th>
+              <th scope="col" class="px-6 py-4">Heading</th>
+              <th scope="col" class="px-6 py-4">Heading</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b dark:border-neutral-500">
+              <td class="whitespace-nowrap px-6 py-4 font-medium">1</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+            </tr>
+            <tr class="border-b dark:border-neutral-500">
+              <td class="whitespace-nowrap px-6 py-4 font-medium ">2</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4 ">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4 ">Cell</td>
+            </tr>
+            <tr class="border-b ">
+              <td class="whitespace-nowrap px-6 py-4 font-medium ">3</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+              <td class="whitespace-nowrap px-6 py-4">Cell</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 @endsection

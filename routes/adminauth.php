@@ -5,6 +5,9 @@ use App\Http\Controllers\admin\adminAuth\AdminRegisterController;
 use App\Http\Controllers\admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
+Route::group(['middleware'=>'prevent-back-history'], function(){
+
+
 Route::prefix('admin')->group(function(){
     /* ------- admin login -------*/
     Route::get('/login', [AdminLoginController::class, 'Index'])->name('admin.login');
@@ -21,5 +24,7 @@ Route::prefix('admin')->group(function(){
      /* ------- admin Dashboard -------*/
      Route::get('/dashboard', [DashboardController::class, 'Index'])->name('admin.dashboard')->middleware('admin');
       /* ------- end admin Dashboard -------*/
+
+});
 
 });
